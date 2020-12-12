@@ -4,7 +4,9 @@ import jim.katunguka.swagger.model.User;
 import jim.katunguka.swagger.repo.UserRepo;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
+@Service
 public class UserService {
     final UserRepo userRepo;
 
