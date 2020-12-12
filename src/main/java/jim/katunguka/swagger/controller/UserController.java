@@ -19,5 +19,23 @@ public class UserController {
         return userService.addUser(user);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getUser(@PathVariable long id){
+        return userService.getUser(id);
+    }
 
+    @GetMapping
+    public ResponseEntity<?> getUsers(){
+        return userService.getUsers();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateUser(@PathVariable long id, @RequestBody User user){
+        return userService.updateUser(id, user);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable long id){
+        return userService.deleteUser(id);
+    }
 }
